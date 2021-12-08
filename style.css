@@ -1,0 +1,110 @@
+*,
+*::before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 400px;
+    background-color: #000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.navigation ul {
+    position: relative;
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    list-style: none;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+}
+
+.navigation ul li a ion-icon {
+    color: #CDCCCD;
+    font-size: 24px;
+
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.navigation ul li.active a ion-icon {
+    color: #fff;
+}
+
+.navigation ul .indicator {
+    position: absolute;
+    top: .5px;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.navigation ul .indicator::before {
+    content: '';
+    height: 8px;
+    width: 60px;
+    left: 5px;
+    right: 5px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.navigation ul .indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .3), rgba(255, 255, 255, .1));
+}
